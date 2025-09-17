@@ -1,10 +1,13 @@
-import HomePageContent from "./HomeFirstPage";
+import About from "../About/About";
+import HomePageContent from "./HomePageContent";
+import SecurityTrust from "./SecurityTrust";
 
 const Home = () => {
   return (
     <div>
       <section id="home" className="min-h-screen">
         <HomePageContent />
+        <SecurityTrust />
       </section>
 
       <section id="feature" className="min-h-screen">
@@ -13,8 +16,7 @@ const Home = () => {
       </section>
 
       <section id="about" className="min-h-screen">
-        {/* About content */}
-        <h2>About Us Section</h2>
+        <About />
       </section>
     </div>
   );

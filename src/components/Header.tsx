@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     if (element) {
       const elementPosition =
         element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerOffset - 20;
+      const offsetPosition = elementPosition - headerOffset - 10;
 
       window.scrollTo({
         top: offsetPosition,
