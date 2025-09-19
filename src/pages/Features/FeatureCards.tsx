@@ -7,7 +7,7 @@ const featureCardData = [
       "Start a session with one click and ToothScribe records the full conversation in real time.",
     description2:
       "When you're done, the app automatically generates a complete, accurate transcript ready for review or editing anytime.",
-    image: "/assests/About/About_Conversation.svg",
+    image: "public/assests/Feature/feature_image_1.svg",
   },
   {
     title: "Smart Transcripts You Can Edit Anytime",
@@ -17,7 +17,7 @@ const featureCardData = [
       "Edit via Text: Type in extra details or corrections they’re instantly added to the transcript.",
       "Edit via Voice: Record voice notes that get appended to the session’s audio and transcript.",
     ],
-    image: "/assests/About/About_Conversation.svg",
+    image: "public/assests/Feature/feature_image_2.svg",
     reverse: true,
   },
   {
@@ -30,7 +30,7 @@ const featureCardData = [
       "SOAP Notes: Structured documentation in four parts Subjective, Objective, Assessment, and Plan  ideal for clinical use.",
     ],
     note: "Switch between formats anytime and edit as needed for your workflow.",
-    image: "/assests/About/About_Conversation.svg",
+    image: "public/assests/Feature/feature_image_3.svg",
   },
   {
     title: "Procedural Notes",
@@ -38,7 +38,7 @@ const featureCardData = [
       "After any procedure, simply provide the key details -ToothScribe will generate a complete, structured summary for your records.",
     description2:
       "Whether it's extractions, implants, or any operative treatment, your surgical notes are created instantly, accurately, and in the right format for clinical use.",
-    image: "/assests/About/About_Conversation.svg",
+    image: "public/assests/Feature/feature_image_4.svg",
     reverse: true,
   },
   {
@@ -49,7 +49,7 @@ const featureCardData = [
       "Patient Letter: A simplified summary in everyday language, outlining the visit and treatment plan.",
       "Referral Doctor Letter: A clinical version with detailed findings, including visit overview, radiological insights, and the proposed treatment plan.",
     ],
-    image: "/assests/About/About_Conversation.svg",
+    image: "public/assests/Feature/feature_image_5.svg",
   },
   {
     title: "Everyday Words, Clinical Precision",
@@ -59,7 +59,7 @@ const featureCardData = [
       "Customizable Term Mapping: Add and save your own general-to-clinical word pairs.",
       "Smarter AI Output: The dictionary supports the AI engine in generating more accurate transcripts and summaries by understanding both types of language.",
     ],
-    image: "/assests/About/About_Conversation.svg",
+    image: "public/assests/Feature/feature_image_6.svg",
     reverse: true,
   },
 ];

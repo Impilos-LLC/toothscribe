@@ -28,11 +28,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       }`}
     >
       {image && (
-        <div className="basis-2/5 flex items-center justify-center bg-gradient-to-br from-teal-50 to-cyan-50 py-6 px-8">
+        <div className="basis-2/5 flex items-center justify-center bg-gradient-to-br from-teal-50 to-cyan-50 min-h-[400px]">
           <img
             src={image}
             alt={title || "Feature image"}
-            className="w-full max-w-sm"
+            className="w-[500px] h-[450px] object-contain pt-10 pr-10"
           />
         </div>
       )}
