@@ -1,4 +1,5 @@
 import About from "../About/About";
+import ToothScribeFeatures from "../ToothscribeApart/ToothscribeApart";
 import HomePageContent from "./HomePageContent";
 import SecurityTrust from "./SecurityTrust";
 
@@ -15,6 +16,7 @@ const Home = () => {
         <h2>Features Section</h2>
       </section>
 
+      <ToothScribeFeatures />
       <section id="about" className="min-h-screen">
         <About />
       </section>

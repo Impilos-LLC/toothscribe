@@ -38,7 +38,7 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 rounded-lg shadow-sm bg-[#F9F9FB]"
+      className="p-7 rounded-lg shadow-sm bg-[#F9F9FB] w-130 mx-auto"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <input
@@ -87,7 +87,7 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="w-full text-white p-3 rounded-lg font-medium bg-[#0D9488] hover:bg-orange-600 transition"
+        className="w-full text-white p-3 rounded-lg font-medium bg-[#0D9488] transition"
       >
         Send Message
       </button>

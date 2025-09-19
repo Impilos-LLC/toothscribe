@@ -10,13 +10,13 @@ export default function SecurityTrust() {
       title: "End-to-End Encryption",
       description:
         "Your PHI is locked down with encryption, isolation, and secure access policies.",
-      iconSrc: "public/assests/Home/dataflow_icon.svg",
+      iconSrc: "public/assests/Home/datafow_icon.svg",
     },
     {
       title: "Access Control & Privacy First",
       description:
         "Only authorized users can view or manage data. You can edit and delete notes anytime.",
-      iconSrc: "public/assests/Home/edit_file_icon.svg",
+      iconSrc: "public/assests/Home/editFile_icon.svg",
     },
   ];
 
