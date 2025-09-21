@@ -8,7 +8,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div>
+    <div id="demo">
       <div className="max-w-[84rem] mx-auto p-8 grid md:grid-cols-2 gap-8 rounded-lg mt-5 bg-no-repeat">
         <div>
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>

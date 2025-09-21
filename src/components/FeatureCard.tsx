@@ -28,11 +28,16 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       }`}
     >
       {image && (
-        <div className="basis-2/5 flex items-center justify-center bg-gradient-to-br from-teal-50 to-cyan-50 min-h-[400px]">
+        <div
+          className="basis-2/5 flex items-center justify-center min-h-[400px] bg-cover bg-center relative"
+          style={{
+            backgroundImage: "url('/assests/Feature/feature_card_bg.svg')",
+          }}
+        >
           <img
             src={image}
             alt={title || "Feature image"}
-            className="w-[500px] h-[450px] object-contain pt-10 pr-10"
+            className="w-[500px] h-[450px] object-contain relative z-10 pt-10 pr-10"
           />
         </div>
       )}

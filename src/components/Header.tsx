@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           <img
             src="public/assests/Home/toothscribe_logo.svg"
             alt="ToothScribe Logo"
-            className="h-10 w-auto"
+            className="h-10 w-60"
           />
         </div>
 
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
             <button
               key={item.label}
               onClick={() => handleNavClick(item.targetId)}
-              className={`transition font-jakarta font-medium text-[16px] leading-[170%] tracking-[0px] px-0 py-1 ${
+              className={`transition font-jakarta font-medium text-[16px] leading-[170%] tracking-[0px] px-0 py-1 cursor-pointer ${
                 activeSection === item.targetId
                   ? "text-[#0D9488]"
                   : "text-gray-700"
@@ -74,10 +74,9 @@ const Header: React.FC = () => {
           ))}
 
           <button
-            onClick={() => handleNavClick("demo")} // Optional demo section
-            className="inline-flex items-center justify-center px-8 py-3 text-[#0D9488] rounded-[16px] text-center border transition"
+            onClick={() => handleNavClick("demo")}
+            className="inline-flex items-center justify-center px-8 py-3 text-[#0D9488] rounded-[16px] text-center border border-[#0D9488] transition duration-300 cursor-pointer hover:bg-[#0D9488] hover:text-white"
             style={{
-              border: "1px solid #0D9488",
               minWidth: "150px",
             }}
           >
@@ -85,8 +84,8 @@ const Header: React.FC = () => {
           </button>
 
           <button
-            onClick={() => alert("Redirect to Signin")} // Or implement Signin logic
-            className="inline-flex items-center justify-center px-8 py-3 text-white text-sm font-medium transition rounded-[16px]"
+            onClick={() => alert("Redirect to Signin")}
+            className="inline-flex items-center justify-center px-8 py-3 text-white text-sm font-medium transition rounded-[16px] cursor-pointer"
             style={{
               background: "linear-gradient(95deg, #2DD4BF 0%, #0F766E 100%)",
               minWidth: "150px",
