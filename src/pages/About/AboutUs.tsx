@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <section className="max-w-6xl mx-auto mb-10">
+    <section className="max-w-6xl mx-auto mb-20 mt-35">
       <h2 className="text-3xl font-bold text-center mb-8">About ToothScribe</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-60 items-center">
