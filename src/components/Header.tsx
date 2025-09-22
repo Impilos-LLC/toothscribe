@@ -84,7 +84,7 @@ const Header: React.FC = () => {
           </button>
 
           <button
-            onClick={() => alert("Redirect to Signin")}
+            onClick={() => window.open("https://app.toothscribe.ai/", "_blank")}
             className="inline-flex items-center justify-center px-8 py-3 text-white text-sm font-medium transition rounded-[16px] cursor-pointer"
             style={{
               background: "linear-gradient(95deg, #2DD4BF 0%, #0F766E 100%)",
