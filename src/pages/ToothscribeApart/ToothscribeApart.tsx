@@ -5,7 +5,7 @@ export default function ToothScribeFeatures() {
         <div
           className="bg-cover bg-center bg-no-repeat pt-20 pb-28 pl-15 pr-15 text-white"
           style={{
-            backgroundImage: `url("public/assests/Feature/toothscribe_apart_bg.svg")`,
+            backgroundImage: `url("/assests/Feature/toothscribe_apart_bg.svg")`,
           }}
         >
           <h2 className="text-3xl font-semibold text-center mb-10">
@@ -16,7 +16,7 @@ export default function ToothScribeFeatures() {
             {/* Referral Doctor Letters */}
             <div className="p-4 rounded-lg">
               <img
-                src={"public/assests/Feature/add_file_icon.svg"}
+                src={"/assests/Feature/add_file_icon.svg"}
                 alt="Referral Icon"
                 className="w-12 h-12 mb-4"
               />
@@ -32,7 +32,7 @@ export default function ToothScribeFeatures() {
             {/* Voice-Based Transcript Editing */}
             <div className="p-4 rounded-lg">
               <img
-                src={"public/assests/Feature/mic_icon.svg"}
+                src={"/assests/Feature/mic_icon.svg"}
                 alt="Voice Icon"
                 className="w-12 h-12 mb-4"
               />
@@ -48,7 +48,7 @@ export default function ToothScribeFeatures() {
             {/* Dental-Specific Notes */}
             <div className="p-4 rounded-lg">
               <img
-                src={"public/assests/Feature/add_file_icon.svg"}
+                src={"/assests/Feature/add_file_icon.svg"}
                 alt="Notes Icon"
                 className="w-12 h-12 mb-4"
               />
@@ -63,7 +63,7 @@ export default function ToothScribeFeatures() {
             {/* Dedicated Support Team */}
             <div className="p-4 rounded-lg">
               <img
-                src={"public/assests/Feature/add_user_icon.svg"}
+                src={"/assests/Feature/add_user_icon.svg"}
                 alt="Support Icon"
                 className="w-12 h-12 mb-4"
               />

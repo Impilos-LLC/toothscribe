@@ -4,19 +4,19 @@ export default function SecurityTrust() {
       title: "Follows HIPAA regulations",
       description:
         "Every feature in ToothScribe is designed with HIPAA regulations in mind so your practice stays protected.",
-      iconSrc: "public/assests/Home/shield_icon.svg",
+      iconSrc: "/assests/Home/shield_icon.svg",
     },
     {
       title: "End-to-End Encryption",
       description:
         "Your PHI is locked down with encryption, isolation, and secure access policies.",
-      iconSrc: "public/assests/Home/datafow_icon.svg",
+      iconSrc: "/assests/Home/datafow_icon.svg",
     },
     {
       title: "Access Control & Privacy First",
       description:
         "Only authorized users can view or manage data. You can edit and delete notes anytime.",
-      iconSrc: "public/assests/Home/editFile_icon.svg",
+      iconSrc: "/assests/Home/editFile_icon.svg",
     },
   ];
 

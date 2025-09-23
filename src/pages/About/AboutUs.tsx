@@ -35,7 +35,7 @@ export default function AboutUs() {
 
         <div className="flex justify-center">
           <img
-            src="public\assests\About\About_Conversation.svg"
+            src="\assests\About\About_Conversation.svg"
             alt="About ToothScribe Illustration"
             className="w-full max-w-md"
           />

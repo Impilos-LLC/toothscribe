@@ -52,7 +52,7 @@ const Header: React.FC = () => {
       <div className="max-w-[90rem] mx-auto px-8 md:px-12 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <img
-            src="public/assests/Home/toothscribe_logo.svg"
+            src="/assests/Home/toothscribe_logo.svg"
             alt="ToothScribe Logo"
             className="h-10 w-60"
           />
