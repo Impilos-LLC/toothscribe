@@ -1,10 +1,13 @@
 import MailLineIcon from "remixicon-react/MailLineIcon";
 import PhoneLineIcon from "remixicon-react/PhoneLineIcon";
 import RequestDemoForm from "./RequestDemoForm";
+import { useSubmitForm } from "../../hooks/useSubmitForm";
 
 const GetInTouch = () => {
-  const handleFormSubmit = (formData: any) => {
-    console.log("Parent received:", formData);
+  const { submitForm, loading, error, success } = useSubmitForm();
+
+  const handleFormSubmit = async (formData: any) => {
+    await submitForm(formData);
   };
 
   return (
@@ -44,7 +47,11 @@ const GetInTouch = () => {
             </div>
           </div>
         </div>
-        <RequestDemoForm onSubmit={handleFormSubmit} />
+        <RequestDemoForm
+          onSubmit={handleFormSubmit}
+          isLoading={loading}
+          isSuccess={success}
+        />
       </div>
     </div>
   );

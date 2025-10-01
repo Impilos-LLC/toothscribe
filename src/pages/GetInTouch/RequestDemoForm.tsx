@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import LoaderLineIcon from "remixicon-react/LoaderLineIcon";
 
 interface FormData {
   firstName: string;
@@ -10,12 +11,18 @@ interface FormData {
 
 interface RequestDemoFormProps {
   onSubmit?: (formData: FormData) => void;
+  isLoading?: boolean;
+  isSuccess?: boolean;
 }
 
 const inputBaseClasses =
   "w-full p-3 rounded-md border border-gray-200 bg-white focus:border-gray-400 focus:ring-1 focus:ring-gray-300";
 
-const RequestDemoForm: React.FC<RequestDemoFormProps> = ({ onSubmit }) => {
+const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
+  onSubmit,
+  isLoading,
+  isSuccess,
+}) => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -34,6 +41,18 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({ onSubmit }) => {
     e.preventDefault();
     onSubmit?.(formData);
   };
+
+  useEffect(() => {
+    if (isSuccess) {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    }
+  }, [isSuccess]);
 
   return (
     <form
@@ -87,9 +106,11 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="w-full text-white p-3 rounded-lg font-medium bg-[#0D9488] transition"
+        disabled={isLoading}
+        className="w-full flex items-center justify-center gap-2 text-white p-3 rounded-lg font-medium bg-[#0D9488] transition disabled:opacity-50"
       >
         Send Message
+        {isLoading && <LoaderLineIcon className="animate-spin" />}
       </button>
     </form>
   );
