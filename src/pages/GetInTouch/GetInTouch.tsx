@@ -4,7 +4,7 @@ import RequestDemoForm from "./RequestDemoForm";
 import { useSubmitForm } from "../../hooks/useSubmitForm";
 
 const GetInTouch = () => {
-  const { submitForm, loading, error, success } = useSubmitForm();
+  const { submitForm, loading, success } = useSubmitForm();
 
   const handleFormSubmit = async (formData: any) => {
     await submitForm(formData);

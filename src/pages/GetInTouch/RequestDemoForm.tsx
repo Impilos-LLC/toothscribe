@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import LoaderLineIcon from "remixicon-react/LoaderLineIcon";
+import Toast from "../../components/Toast";
 
 interface FormData {
   firstName: string;
@@ -31,6 +32,8 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
     message: "",
   });
 
+  const [showToast, setShowToast] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -51,68 +54,89 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
         subject: "",
         message: "",
       });
+      setShowToast(true);
     }
   }, [isSuccess]);
 
+  const isFormValid = Object.values(formData).every(
+    (field) => field.trim() !== ""
+  );
+
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="p-7 rounded-lg shadow-sm bg-[#F9F9FB] w-130 mx-auto"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <input
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          value={formData.firstName}
-          onChange={handleChange}
-          className={inputBaseClasses}
+    <div className="relative">
+      {showToast && (
+        <Toast
+          message="We got your query, we’ll get back to you soon."
+          type="success"
+          duration={5000}
+          onClose={() => setShowToast(false)}
         />
-        <input
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
-          value={formData.lastName}
-          onChange={handleChange}
-          className={inputBaseClasses}
-        />
-      </div>
+      )}
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        value={formData.email}
-        onChange={handleChange}
-        className={`${inputBaseClasses} mb-4`}
-      />
-
-      <input
-        type="text"
-        name="subject"
-        placeholder="Subject"
-        value={formData.subject}
-        onChange={handleChange}
-        className={`${inputBaseClasses} mb-4`}
-      />
-
-      <textarea
-        name="message"
-        placeholder="Enter your message"
-        value={formData.message}
-        onChange={handleChange}
-        className={`${inputBaseClasses} mb-4 h-28 resize-none`}
-      />
-
-      <button
-        type="submit"
-        disabled={isLoading}
-        className="w-full flex items-center justify-center gap-2 text-white p-3 rounded-lg font-medium bg-[#0D9488] transition disabled:opacity-50"
+      <form
+        onSubmit={handleSubmit}
+        className="p-7 rounded-lg shadow-sm bg-[#F9F9FB] w-130 mx-auto"
       >
-        Send Message
-        {isLoading && <LoaderLineIcon className="animate-spin" />}
-      </button>
-    </form>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            value={formData.firstName}
+            onChange={handleChange}
+            className={inputBaseClasses}
+          />
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={formData.lastName}
+            onChange={handleChange}
+            className={inputBaseClasses}
+          />
+        </div>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          value={formData.email}
+          onChange={handleChange}
+          className={`${inputBaseClasses} mb-4`}
+        />
+
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          value={formData.subject}
+          onChange={handleChange}
+          className={`${inputBaseClasses} mb-4`}
+        />
+
+        <textarea
+          name="message"
+          placeholder="Enter your message"
+          value={formData.message}
+          onChange={handleChange}
+          className={`${inputBaseClasses} mb-4 h-28 resize-none`}
+        />
+
+        <button
+          type="submit"
+          disabled={isLoading || !isFormValid}
+          className={`w-full flex items-center justify-center gap-2 text-white p-3 rounded-lg font-medium bg-[#0D9488] transition 
+          ${
+            isLoading || !isFormValid
+              ? "opacity-50 cursor-not-allowed"
+              : "cursor-pointer"
+          }`}
+        >
+          Send Message
+          {isLoading && <LoaderLineIcon className="animate-spin" />}
+        </button>
+      </form>
+    </div>
   );
 };
 
