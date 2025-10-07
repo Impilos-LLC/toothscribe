@@ -1,5 +1,5 @@
 import MailLineIcon from "remixicon-react/MailLineIcon";
-import PhoneLineIcon from "remixicon-react/PhoneLineIcon";
+// import PhoneLineIcon from "remixicon-react/PhoneLineIcon";
 import RequestDemoForm from "./RequestDemoForm";
 import { useSubmitForm } from "../../hooks/useSubmitForm";
 
@@ -30,12 +30,12 @@ const GetInTouch = () => {
 
             <div>
               <p className="text-sm text-gray-500">Email Us</p>
-              <p className="font-medium">hello@earlyread.com</p>
+              <p className="font-medium">info@toothscribe.ai</p>
             </div>
           </div>
 
           <div className="flex items-center">
-            <div
+            {/* <div
               className="text-white p-3 rounded-lg mr-4"
               style={{ backgroundColor: "#0D9488" }}
             >
@@ -44,7 +44,7 @@ const GetInTouch = () => {
             <div>
               <p className="text-sm text-gray-500">Call Us</p>
               <p className="font-medium">+1-586-509-6993</p>
-            </div>
+            </div> */}
           </div>
         </div>
         <RequestDemoForm
