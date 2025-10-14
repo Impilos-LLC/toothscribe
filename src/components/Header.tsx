@@ -142,7 +142,7 @@ const Header: React.FC = () => {
               onClick={() =>
                 window.open("https://app.toothscribe.ai/", "_blank")
               }
-              className="w-full inline-flex items-center justify-center px-6 py-2 text-white text-sm font-medium transition rounded-[16px] cursor-pointer"
+              className="w-full inline-flex items-center justify-center px-6 py-3 text-white text-sm font-medium transition rounded-[16px] cursor-pointer"
               style={{
                 background: "linear-gradient(95deg, #2DD4BF 0%, #0F766E 100%)",
               }}
