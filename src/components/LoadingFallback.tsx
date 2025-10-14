@@ -2,7 +2,7 @@ const LoadingFallback = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen w-full bg-white">
       <img
-        src="/assests/Home/toothscribe_logo.svg"
+        src="/assets/Home/toothscribe_logo.svg"
         alt="Loading"
         className="w-20 h-20 mb-6"
       />

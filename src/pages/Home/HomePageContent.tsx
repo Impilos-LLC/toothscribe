@@ -74,7 +74,7 @@ function HomePageContent() {
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-grid-lines">
       {/* Blurry SVG Background */}
       <img
-        src="/assests/Home/blurryBG_image.svg"
+        src="/assets/Home/blurryBG_image.svg"
         alt="Background Decoration"
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none mt-10"
         style={{ width: "1900px", height: "700px" }}

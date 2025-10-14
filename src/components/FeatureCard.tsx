@@ -31,7 +31,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         <div
           className="basis-2/5 flex items-center justify-center min-h-[400px] bg-cover bg-center relative"
           style={{
-            backgroundImage: "url('/assests/Feature/feature_card_bg.svg')",
+            backgroundImage: "url('/assets/Feature/feature_card_bg.svg')",
           }}
         >
           <img

@@ -7,7 +7,7 @@ const Features = () => {
       style={{
         backgroundImage: `
           linear-gradient(to bottom, #252626, #3F4040),
-          url("/assests/Feature/feature_bg_image.svg")
+          url("/assets/Feature/feature_bg_image.svg")
         `,
         backgroundSize: "cover",
         backgroundPosition: "center",
