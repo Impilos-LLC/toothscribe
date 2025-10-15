@@ -1,4 +1,5 @@
 import MicLineIcon from "remixicon-react/MicLineIcon";
+import { handleNavClick } from "../../utility/scrollUtils";
 
 function RecordSessionCard() {
   return (
@@ -31,8 +32,8 @@ function RecordSessionCard() {
       </div>
 
       <button
-        onClick={() => alert("Redirect to Signin")}
-        className="inline-flex items-center justify-center px-8 py-3 text-white text-sm font-medium transition rounded-[16px] mt-14 md:mt-0"
+        onClick={() => handleNavClick("demo")}
+        className="inline-flex items-center justify-center px-8 py-3 text-white text-sm font-medium transition rounded-[16px] mt-14 md:mt-0 cursor-pointer"
         style={{ background: "#0F766E", minWidth: "150px" }}
       >
         Book a demo
@@ -72,7 +73,7 @@ function HomePageHeadlines() {
 
 function HomePageContent() {
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-grid-lines">
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-grid-lines mt-25">
       {/* Blurry SVG Background */}
       <img
         src="/assets/Home/blurryBG_image.svg"

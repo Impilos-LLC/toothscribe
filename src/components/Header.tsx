@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MenuLineIcon from "remixicon-react/MenuLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
+import { handleNavClick } from "../utility/scrollUtils";
 
 const navItems = [
   { label: "Home", targetId: "home" },
@@ -11,25 +12,6 @@ const navItems = [
 const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleNavClick = (targetId: string) => {
-    const element = document.getElementById(targetId);
-    const header = document.querySelector("header");
-    const headerOffset = header ? header.clientHeight : 0;
-
-    if (element) {
-      const elementPosition =
-        element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerOffset - 10;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-
-      setMobileMenuOpen(false);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
