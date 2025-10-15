@@ -27,7 +27,7 @@ const featureCardData = [
     bulletPoints: [
       "Point-Based Summary: Clear bullet points that highlight key clinical information.",
       "Brief Summary: A concise paragraph that captures the overall context of the visit.",
-      "SOAP Notes: Structured documentation in four parts Subjective, Objective, Assessment, and Plan  ideal for clinical use.",
+      "SOAP Notes: Structured documentation in four parts Subjective, Objective, Assessment, and Plan – ideal for clinical use.",
     ],
     note: "Switch between formats anytime and edit as needed for your workflow.",
     image: "/assets/Feature/feature_image_3.svg",
@@ -35,7 +35,7 @@ const featureCardData = [
   {
     title: "Procedural Notes",
     description1:
-      "After any procedure, simply provide the key details -ToothScribe will generate a complete, structured summary for your records.",
+      "After any procedure, simply provide the key details – ToothScribe will generate a complete, structured summary for your records.",
     description2:
       "Whether it's extractions, implants, or any operative treatment, your surgical notes are created instantly, accurately, and in the right format for clinical use.",
     image: "/assets/Feature/feature_image_4.svg",
@@ -54,7 +54,7 @@ const featureCardData = [
   {
     title: "Everyday Words, Clinical Precision",
     subTitle:
-      "ToothScribe’s built-in Medical Dictionary maps patient-friendly words to their clinical equivalents - helping periodontist and oral surgeons bridge the gap between casual and medical terms.",
+      "ToothScribe’s built-in Medical Dictionary maps patient-friendly words to their clinical equivalents – helping periodontists and oral surgeons bridge the gap between casual and medical terms.",
     bulletPoints: [
       "Customizable Term Mapping: Add and save your own general-to-clinical word pairs.",
       "Smarter AI Output: The dictionary supports the AI engine in generating more accurate transcripts and summaries by understanding both types of language.",
@@ -66,11 +66,11 @@ const featureCardData = [
 
 const FeatureCards = () => {
   return (
-    <>
+    <section className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-14">
       {featureCardData.map((card, index) => (
         <FeatureCard key={index} {...card} />
       ))}
-    </>
+    </section>
   );
 };
 

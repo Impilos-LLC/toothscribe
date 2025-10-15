@@ -37,20 +37,20 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           <img
             src={image}
             alt={title || "Feature image"}
-            className="w-[500px] h-[450px] object-contain relative z-10 pt-10 pr-10"
+            className="w-[500px] h-[450px] object-contain relative z-10 pt-10 pr-10 mx-auto md:mx-0"
           />
         </div>
       )}
 
       {(title || subTitle || description1 || description2 || bulletPoints) && (
         <div
-          className={`basis-3/5 py-6 flex flex-col justify-center ${
-            reverse ? "pl-16" : "pl-12"
-          }`}
+          className={`basis-3/5 py-6 flex flex-col justify-center px-6 md:px-0 ${
+            reverse ? "md:pl-16" : "md:pl-12"
+          } text-center md:text-left`}
         >
-          <div className="max-w-xl text-left">
+          <div className="max-w-xl mx-auto md:mx-0">
             {title && (
-              <h2 className="text-[40px] font-semibold leading-[120%] tracking-[-1.5px] text-black font-montserrat mb-3">
+              <h2 className="text-[32px] md:text-[40px] font-semibold leading-[120%] tracking-[-1.5px] text-black font-montserrat mb-3">
                 {title}
               </h2>
             )}
@@ -71,9 +71,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             )}
 
             {bulletPoints && bulletPoints.length > 0 && (
-              <div className="space-y-3 mt-2">
+              <div className="space-y-3 mt-2 text-left md:text-left inline-block md:inline-block">
                 {bulletPoints.map((point, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 justify-center md:justify-start"
+                  >
                     <div className="mt-1 w-5 h-5 rounded-full bg-gray-500 flex items-center justify-center shrink-0">
                       <span className="text-white text-xs">✓</span>
                     </div>

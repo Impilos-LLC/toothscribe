@@ -1,11 +1,12 @@
 export default function AboutUs() {
   return (
-    <section className="max-w-6xl mx-auto mb-20 mt-15">
+    <section className="max-w-6xl mx-auto mb-20 mt-15 px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-center mb-8">About ToothScribe</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-60 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+        {/* Text Section */}
         <div
-          className="text-left text-gray-700 max-w-xl mx-auto md:mx-0 space-y-8"
+          className="text-center md:text-left text-gray-700 max-w-xl mx-auto md:mx-0 space-y-6"
           style={{
             fontFamily: '"Plus Jakarta Sans", sans-serif',
             fontSize: "16px",
@@ -33,11 +34,12 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <div className="flex justify-center">
+        {/* Image Section */}
+        <div className="flex justify-center md:justify-end">
           <img
-            src="\assets\About\About_Conversation.svg"
+            src="/assets/About/About_Conversation.svg"
             alt="About ToothScribe Illustration"
-            className="w-full max-w-md"
+            className="w-full max-w-md mx-auto"
           />
         </div>
       </div>

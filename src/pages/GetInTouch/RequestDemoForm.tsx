@@ -63,7 +63,7 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
   );
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       {showToast && (
         <Toast
           message="We got your query, we’ll get back to you soon."
@@ -75,9 +75,18 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
 
       <form
         onSubmit={handleSubmit}
-        className="p-7 rounded-lg shadow-sm bg-[#F9F9FB] w-130 mx-auto"
+        className="
+          bg-[#F9F9FB] 
+          p-6 sm:p-8 
+          rounded-2xl 
+          shadow-sm 
+          w-full 
+          max-w-[500px] 
+          mx-auto
+        "
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        {/* First & Last Name */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <input
             type="text"
             name="firstName"
@@ -96,6 +105,7 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
           />
         </div>
 
+        {/* Email */}
         <input
           type="email"
           name="email"
@@ -105,6 +115,7 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
           className={`${inputBaseClasses} mb-4`}
         />
 
+        {/* Subject */}
         <input
           type="text"
           name="subject"
@@ -114,6 +125,7 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
           className={`${inputBaseClasses} mb-4`}
         />
 
+        {/* Message */}
         <textarea
           name="message"
           placeholder="Enter your message"
@@ -122,15 +134,21 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({
           className={`${inputBaseClasses} mb-4 h-28 resize-none`}
         />
 
+        {/* Submit Button */}
         <button
           type="submit"
           disabled={isLoading || !isFormValid}
-          className={`w-full flex items-center justify-center gap-2 text-white p-3 rounded-lg font-medium bg-[#0D9488] transition 
-          ${
-            isLoading || !isFormValid
-              ? "opacity-50 cursor-not-allowed"
-              : "cursor-pointer"
-          }`}
+          className={`
+            w-full 
+            flex items-center justify-center gap-2 
+            text-white p-3 rounded-lg font-medium 
+            bg-[#0D9488] transition 
+            ${
+              isLoading || !isFormValid
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-[#0b7d74] cursor-pointer"
+            }
+          `}
         >
           Send Message
           {isLoading && <LoaderLineIcon className="animate-spin" />}
